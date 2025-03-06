@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Vizsga feladat teszt</title>
+</head>
+
+<body>
+    <table id="testTable" class="table table-sm table-striped table-dark table-hover">
+        <thead>
+            <tr>
+                <td>Teszt neve</td>
+                <td>Input adat</td>
+                <td>Elvárt eredmény</td>
+                <td>Végeredmény</td>
+                <td>Sikeresség</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        //Ide illessze be a JavasScript kódot a teszteléshez
+        //1.feladat
+        function KockaTerfogat(a_oldal) {
+            return a_oldal ** 3;
+        }
+
+        eredmeny01 = KockaTerfogatV1(2);
+        eredmeny02 = KockaTerfogatV2(3);
+        eredmeny03 = KockaTerfogatV3(5);
+
+        document.write("Az 1. feladat megoldása:", eredmeny01);
+        document.write("<br>Az 2. feladat megoldása:", eredmeny02);
+        document.write("<br>Az 3. feladat megoldása:", eredmeny03);
+
+        //2. feladat
+
+        function SzovegVisszafele(szoveg) {
+            let szoveg_ertek = "";
+            for (let i = szoveg.length - 1; i >= 0; i--) {
+                szoveg_ertek += szoveg[i];
+            }
+            return szoveg_ertek;
+        }
+        console.log(SzovegVisszafele("Szeretem a programozást"));
+        console.log(SzovegVisszafele("Géza kék az ég"));
+        console.log(SzovegVisszafele("Répa, retek, mogyoró"));
+
+        //3. feladat
+        function CegAtlagEletkor(vizsgaltObjektum) {
+            let eletkor = 0;
+            for (let i = 0; i < vizsgaltObjektum.length; i++) {
+                eletkor += vizsgaltObjektum[i].kor;
+            }
+            return (eletkor / vizsgaltObjektum.length).toFixed(0);
+        }
+        function AtlagKorKiir(kor) {
+            console.log("A dolgozók átlag életkora:" + kor);
+        }
+        eredmeny = CegAtlagEletkor(Dolgozok);
+        AtlagKorKiir(eredmeny)
+
+    </script>
+    <script src="teszt.js"></script>
+</body>
+
+</html>
